@@ -1,32 +1,12 @@
 # Ignore compiled Java class files
-firstActivity/*.class
-secondActivity/*.class
-thirdActivity/*.class
+**/*.class
 
 # Ignore packaged files (like JAR, WAR)
-single-module-project/target/classes/com/existActivities*.class
-ingle-module-project/target/test-classes/com/existActivities*.class
-single-module-project/target*.jar
+**/*.jar
 
-single-module-project/target/classes/com/existActivities*.class
-single-module-project/target*.jar
-
-parent-project/app/target*.jar
-parent-project/app/target/classes/com/exist*.class
-parent-project/app/target/test-classes/com/exist*.class
-parent-project/model/target*.jar
-parent-project/model/target/classes/com/exist*.class
-parent-project/model/target/test-classes/com/exist*.class
-parent-project/service/target*.jar
-parent-project/service/target/classes/com/exist*.class
-parent-project/service/target/test-classes/com/exist*.class
-parent-project/utilities/target*.jar
-parent-project/utilities/target/classes/com/exist*.class
-parent-project/utilities/target/test-classes/com/exist*.class
+# Ignore target directories and their contents (for Maven)
+**/target/
 
 # Ignore temporary and log files
-single-module-project/*.log
-single-module-project/*.tmp
-
-parent-project/*.log
-parent-project/*.tmp
+**/*.log
+**/*.tmp
