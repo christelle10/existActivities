@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- Parent Project Details -->
+  <groupId>com.exist</groupId>
+  <artifactId>parent-project</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Multi-Module Java Activity</name>
+  <description>A modularized Java application for file manipulation.</description>
+  <url>https://www.exist.com</url>
+
+  <!-- List of Submodules -->
+  <modules>
+    <module>app</module>
+    <module>model</module>
+    <module>service</module>
+    <module>utilities</module>
+  </modules>
+
+  <!-- Centralized Dependency Management -->
+  <dependencyManagement>
+    <dependencies>
+      <!-- JUnit for Testing (available to all modules) -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>3.8.1</version>
+        <scope>test</scope>
+      </dependency>
+
+      <!-- Apache Commons IO (available to all modules) -->
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.11.0</version>
+      </dependency>
+
+
+      <!-- Internal Modules -->
+      <dependency>
+        <groupId>com.exist</groupId>
+        <artifactId>app</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.exist</groupId>
+        <artifactId>model</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.exist</groupId>
+        <artifactId>service</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.exist</groupId>
+        <artifactId>utilities</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <plugins>
+
+      
+
+      
+
+    </plugins>
+  </build>
+
+  <!-- Profiles -->
+  <profiles>
+    <profile>
+      <id>env-dev</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+        <property>
+          <name>target-env</name>
+          <value>dev</value>
+        </property>
+      </activation>
+      <properties>
+        <java.version>17</java.version>
+        <env>development</env>
+      </properties>
+      <dependencies>
+        <!-- dev-specific dependencies here -->
+      </dependencies>
+      <build>
+        <plugins>
+          <!-- dev-specific plugin configurations -->
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+</project>
