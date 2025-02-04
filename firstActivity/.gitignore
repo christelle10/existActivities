@@ -1,0 +1,16 @@
+# Ignore compiled Java class files
+firstActivity/*.class
+secondActivity/*.class
+thirdActivity/*.class
+
+# Ignore packaged files (like JAR, WAR)
+single-module-project/*.jar
+parent-project/*.jar
+
+
+# Ignore temporary and log files
+single-module-project/*.log
+single-module-project/*.tmp
+
+parent-project/*.log
+parent-project/*.tmp
